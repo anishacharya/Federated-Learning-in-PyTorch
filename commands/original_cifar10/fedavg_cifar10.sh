@@ -3,7 +3,7 @@
 # FedAvg experiments in Figure 4, 9 of (McMahan et al., 2016)
 ## IID split
 python3 main.py \
-    --exp_name FedAvg_CIFAR10_CNN_IID --seed 42 --device cuda \
+    --exp_name FedAvg_CIFAR10_CNN_IID --seed 42 --device cuda --use_tb\
     --dataset CIFAR10 \
     --split_type iid --test_size -1 \
     --model_name SimpleCNN --crop 24 --randhf 0.5 --randjit 0.5 --imnorm --hidden_size 64 \

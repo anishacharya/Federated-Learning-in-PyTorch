@@ -65,7 +65,7 @@ if __name__ == "__main__":
 	parser.add_argument('--data_path', type=str, default='./data', help='path to save & read raw data')
 	parser.add_argument('--log_path', type=str, default='./log', help='path to save logs')
 	parser.add_argument('--result_path', type=str, default='./result', help='path to save results')
-	parser.add_argument('--use_tb', type=bool, default=True, action='store_true',
+	parser.add_argument('--use_tb', type=bool, action='store_true',
 	                    help='use TensorBoard for log tracking (if passed)')
 	parser.add_argument('--tb_port', type=int, default=6006,
 	                    help='TensorBoard port number (valid only if `use_tb`)')
