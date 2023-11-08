@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 # results/*
+data/
 default_model
 *.pt
 .ipynb_checkpoints/*
