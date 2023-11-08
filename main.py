@@ -76,12 +76,14 @@ if __name__ == "__main__":
 	# Dataset arguments #
 	#####################
 	# dataset configuration arguments
-	parser.add_argument('--dataset', help='''name of dataset to use for an experiment (NOTE: case sensitive)
-    - image classification datasets in `torchvision.datasets`,
-    - text classification datasets in `torchtext.datasets`,
-    - LEAF benchmarks [ FEMNIST | Sent140 | Shakespeare | CelebA | Reddit ],
-    - among [ TinyImageNet | CINIC10 | SpeechCommands | BeerReviewsA | BeerReviewsL | Heart | Adult | Cover | GLEAM ]
-    ''', type=str, required=True)
+	parser.add_argument('--dataset', type=str, required=True,
+	                    help='''name of dataset to use for experiment (NOTE: case sensitive)
+					    - image classification datasets in `torchvision.datasets`,
+					    - text classification datasets in `torchtext.datasets`,
+					    - LEAF benchmarks [ FEMNIST | Sent140 | Shakespeare | CelebA | Reddit ],
+					    - among [ TinyImageNet | CINIC10 | SpeechCommands | BeerReviewsA
+					    | BeerReviewsL | Heart | Adult | Cover | GLEAM ]
+					    ''')
 	parser.add_argument('--test_size',
 	                    help='a fraction of local hold-out dataset for evaluation '
 	                         '(-1 for assigning pre-defined test split as local holdout set)',
