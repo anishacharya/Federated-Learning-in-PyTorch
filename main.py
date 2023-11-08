@@ -93,8 +93,8 @@ if __name__ == "__main__":
 	                    type=float, choices=[Range(0., 1.)], default=1.0)
 	
 	# data augmentation arguments
-	parser.add_argument('--resize', help='resize input images (using `torchvision.transforms.Resize`)', type=int,
-	                    default=None)
+	parser.add_argument('--resize', type=int, default=None,
+	                    help='resize input images (using `torchvision.transforms.Resize`)')
 	parser.add_argument('--crop',
 	                    help='crop input images (using `torchvision.transforms.CenterCrop` (for evaluation) and '
 	                         '`torchvision.transforms.RandomCrop` (for training))',
