@@ -58,16 +58,19 @@ if __name__ == "__main__":
 	#####################
 	# Default arguments #
 	#####################
-	parser.add_argument('--exp_name', help='name of the experiment', type=str, required=True)
-	parser.add_argument('--seed', help='global random seed', type=int, default=5959)
-	parser.add_argument('--device', help='device to use; `cpu`, `cuda`, `cuda:GPU_NUMBER`', type=str, default='cpu')
-	parser.add_argument('--data_path', help='path to save & read raw data', type=str, default='./data')
-	parser.add_argument('--log_path', help='path to save logs', type=str, default='./log')
-	parser.add_argument('--result_path', help='path to save results', type=str, default='./result')
-	parser.add_argument('--use_tb', help='use TensorBoard for log tracking (if passed)', action='store_true')
-	parser.add_argument('--tb_port', help='TensorBoard port number (valid only if `use_tb`)', type=int, default=6006)
-	parser.add_argument('--tb_host', help='TensorBoard host address (valid only if `use_tb`)', type=str,
-	                    default='0.0.0.0')
+	parser.add_argument('--exp_name', type=str, required=True, help='name of the experiment')
+	parser.add_argument('--seed', type=int, default=5959, help='global random seed')
+	parser.add_argument('--device', type=str, default='cpu',
+	                    help='device to use; `cpu`, `cuda`, `cuda:GPU_NUMBER`')
+	parser.add_argument('--data_path', type=str, default='./data', help='path to save & read raw data')
+	parser.add_argument('--log_path', type=str, default='./log', help='path to save logs')
+	parser.add_argument('--result_path', type=str, default='./result', help='path to save results')
+	parser.add_argument('--use_tb', type=bool, default=True, action='store_true',
+	                    help='use TensorBoard for log tracking (if passed)')
+	parser.add_argument('--tb_port', type=int, default=6006,
+	                    help='TensorBoard port number (valid only if `use_tb`)')
+	parser.add_argument('--tb_host', type=str, default='0.0.0.0',
+	                    help='TensorBoard host address (valid only if `use_tb`)')
 	
 	#####################
 	# Dataset arguments #
